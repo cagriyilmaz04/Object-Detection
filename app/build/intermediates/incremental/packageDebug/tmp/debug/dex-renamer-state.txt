@@ -1,4 +1,4 @@
-#Wed Jan 10 23:18:12 TRT 2024
+#Thu Jan 11 14:48:17 TRT 2024
 base.0=C\:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex

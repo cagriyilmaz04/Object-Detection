@@ -1729,9 +1729,14 @@ mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 navigation nav_graph
 raw alasca
+raw alascainfo
 raw america
 raw canada
+raw canadainfo
 raw mexico
+raw mexicoinfo
+raw temp
+raw unitedstatesinfo
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

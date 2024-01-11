@@ -27,7 +27,6 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 import android.widget.Toast
 import androidx.camera.core.AspectRatio
 import androidx.camera.core.Camera
@@ -69,7 +68,7 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
 
     private var sharedPreferences: SharedPreferences ? = null
 
-
+    var mediaPlayer:MediaPlayer?=null
 
     override fun onResume() {
         super.onResume()
@@ -95,7 +94,7 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
       savedInstanceState: Bundle?
     ): View {
         _fragmentCameraBinding = FragmentCameraBinding.inflate(inflater, container, false)
-        sharedPreferences = requireActivity().getSharedPreferences("org.tensorflow.lite.examples.objectdetection",
+        sharedPreferences = requireActivity().getSharedPreferences("org.tensorflow.lite",
             Context.MODE_PRIVATE)
 
         return fragmentCameraBinding.root
@@ -104,6 +103,7 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
     @SuppressLint("MissingPermission")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
 
         objectDetectorHelper = ObjectDetectorHelper(
             context = requireContext(),
@@ -118,103 +118,9 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
             setUpCamera()
         }
 
-        // Attach listeners to UI control widgets
-        initBottomSheetControls()
     }
 
-    private fun initBottomSheetControls() {
-        // When clicked, lower detection score threshold floor
-        fragmentCameraBinding.bottomSheetLayout.thresholdMinus.setOnClickListener {
-            if (objectDetectorHelper.threshold >= 0.1) {
-                objectDetectorHelper.threshold -= 0.1f
-                updateControlsUi()
-            }
-        }
 
-        // When clicked, raise detection score threshold floor
-        fragmentCameraBinding.bottomSheetLayout.thresholdPlus.setOnClickListener {
-            if (objectDetectorHelper.threshold <= 0.8) {
-                objectDetectorHelper.threshold += 0.1f
-                updateControlsUi()
-            }
-        }
-
-        // When clicked, reduce the number of objects that can be detected at a time
-        fragmentCameraBinding.bottomSheetLayout.maxResultsMinus.setOnClickListener {
-            if (objectDetectorHelper.maxResults > 1) {
-                objectDetectorHelper.maxResults--
-                updateControlsUi()
-            }
-        }
-
-        // When clicked, increase the number of objects that can be detected at a time
-        fragmentCameraBinding.bottomSheetLayout.maxResultsPlus.setOnClickListener {
-            if (objectDetectorHelper.maxResults < 5) {
-                objectDetectorHelper.maxResults++
-                updateControlsUi()
-            }
-        }
-
-        // When clicked, decrease the number of threads used for detection
-        fragmentCameraBinding.bottomSheetLayout.threadsMinus.setOnClickListener {
-            if (objectDetectorHelper.numThreads > 1) {
-                objectDetectorHelper.numThreads--
-                updateControlsUi()
-            }
-        }
-
-        // When clicked, increase the number of threads used for detection
-        fragmentCameraBinding.bottomSheetLayout.threadsPlus.setOnClickListener {
-            if (objectDetectorHelper.numThreads < 4) {
-                objectDetectorHelper.numThreads++
-                updateControlsUi()
-            }
-        }
-
-        // When clicked, change the underlying hardware used for inference. Current options are CPU
-        // GPU, and NNAPI
-        fragmentCameraBinding.bottomSheetLayout.spinnerDelegate.setSelection(0, false)
-        fragmentCameraBinding.bottomSheetLayout.spinnerDelegate.onItemSelectedListener =
-            object : AdapterView.OnItemSelectedListener {
-                override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                    objectDetectorHelper.currentDelegate = p2
-                    updateControlsUi()
-                }
-
-                override fun onNothingSelected(p0: AdapterView<*>?) {
-                    /* no op */
-                }
-            }
-
-        // When clicked, change the underlying model used for object detection
-        fragmentCameraBinding.bottomSheetLayout.spinnerModel.setSelection(0, false)
-        fragmentCameraBinding.bottomSheetLayout.spinnerModel.onItemSelectedListener =
-            object : AdapterView.OnItemSelectedListener {
-                override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                    objectDetectorHelper.currentModel = p2
-                    updateControlsUi()
-                }
-
-                override fun onNothingSelected(p0: AdapterView<*>?) {
-                    /* no op */
-                }
-            }
-    }
-
-    // Update the values displayed in the bottom sheet. Reset detector.
-    private fun updateControlsUi() {
-        fragmentCameraBinding.bottomSheetLayout.maxResultsValue.text =
-            objectDetectorHelper.maxResults.toString()
-        fragmentCameraBinding.bottomSheetLayout.thresholdValue.text =
-            String.format("%.2f", objectDetectorHelper.threshold)
-        fragmentCameraBinding.bottomSheetLayout.threadsValue.text =
-            objectDetectorHelper.numThreads.toString()
-
-        // Needs to be cleared instead of reinitialized because the GPU
-        // delegate needs to be initialized on the thread using it when applicable
-        objectDetectorHelper.clearObjectDetector()
-        fragmentCameraBinding.overlay.clear()
-    }
 
     // Initialize CameraX, and prepare to bind the camera use cases
     private fun setUpCamera() {
@@ -314,10 +220,7 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
       imageWidth: Int
     ) {
         activity?.runOnUiThread {
-            fragmentCameraBinding.bottomSheetLayout.inferenceTimeVal.text =
-                            String.format("%d ms", inferenceTime)
 
-            // Pass necessary information to OverlayView for drawing on the canvas
             fragmentCameraBinding.overlay.setResults(
                 results ?: LinkedList<Detection>(),
                 imageHeight,
@@ -332,37 +235,39 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
                         firstItem.boundingBox,  // Birinci objenin koordinatları
                         secondItem.boundingBox   // İkinci objenin koordinatları
                     )
+
                     var strCountry = ""
                     var strFinger = ""
+
                     if (intersecting) {
+                        if(!((sharedPreferences?.getString("firstItem","")!!.equals(firstItem.categories.get(0).label.toString())||sharedPreferences?.getString("firstItem","").equals(secondItem.categories.get(0).label.toString())&&
+                                    (sharedPreferences?.getString("secondItem","")!!.equals(firstItem.categories.get(0).label.toString())||sharedPreferences?.getString("secondItem","").equals(secondItem.categories.get(0).label.toString()))))){
+                            if(firstItem.categories.get(0).label.equals("finger")){
+                                strFinger += "finger"
+                                strCountry += secondItem.categories.get(0).label.toString()
 
-                        if(firstItem.categories.get(0).label.equals("finger")){
-                            strFinger += "finger"
-                            strCountry += secondItem.categories.get(0).label.toString()
+                            }else if(secondItem.categories.get(0).label.equals("finger")){
+                                strFinger += "finger"
+                                strCountry += firstItem.categories.get(0).label.toString()
+                            }else if(firstItem.categories.get(0).label.equals("two_fingers")){
+                                strFinger += "two_fingers"
+                                strCountry += secondItem.categories.get(0).label.toString()
+                            }else if(secondItem.categories.get(0).label.equals("two_fingers")){
+                                strFinger += "two_fingers"
+                                strCountry += firstItem.categories.get(0).label.toString()
+                            }
+                            sharedPreferences!!.edit().remove("firstItem").apply()
+                            sharedPreferences!!.edit().remove("secondItem").apply()
 
-                        }else if(secondItem.categories.get(0).label.equals("finger")){
-                            strFinger += "finger"
-                            strCountry += firstItem.categories.get(0).label.toString()
-                        }else if(firstItem.categories.get(0).label.equals("two_fingers")){
-                            strFinger += "two_fingers"
-                            strCountry += secondItem.categories.get(0).label.toString()
-                        }else if(secondItem.categories.get(0).label.equals("two_fingers")){
-                            strFinger += "two_fingers"
-                            strCountry += firstItem.categories.get(0).label.toString()
+                            sharedPreferences!!.edit().putString("firstItem",strFinger).apply()
+                            sharedPreferences!!.edit().putString("secondItem",strCountry).apply()
+
+
+                            Toast.makeText(requireContext(),"1",Toast.LENGTH_SHORT).show()
+                            GiveInformation(strFinger,strCountry)
+
                         }
-                        sharedPreferences!!.edit().remove("firstItem").apply()
-                        sharedPreferences!!.edit().remove("secondItem").apply()
-
-                        sharedPreferences!!.edit().putString("firstItem",strFinger).apply()
-                        sharedPreferences!!.edit().putString("secondItem",strCountry).apply()
-                        GiveInformation(strFinger,strCountry)
-
                         Toast.makeText(requireContext(), "Objeler çakışıyor!", Toast.LENGTH_SHORT).show()
-
-
-
-                } else {
-                    Toast.makeText(requireContext(), "Objeler çakışmıyor.", Toast.LENGTH_SHORT).show()
                 }
             }
 
@@ -372,36 +277,50 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
     }
 
     private fun GiveInformation(strFinger: String, strCountry: String) {
-        var mediaPlayer: MediaPlayer? = null
+
         var temp = 0
-        when(strCountry){
-            "america"->{
-                temp = R.raw.america
-            }
-            "canada" ->{
-                temp = R.raw.canada
-            }
-            "mexico" ->{
-                temp = R.raw.mexico
-            }
-            "alasca" -> {
-                temp = R.raw.alasca
-            }
-            else -> {
-                temp = -1
-            }
 
-        }
         if(strFinger.equals("two_fingers")){
-            mediaPlayer = MediaPlayer.create(requireContext(), temp)
-        }else if(strFinger.equals("finger")){
-            if(temp!= -1){
-                mediaPlayer = MediaPlayer.create(requireContext(), temp)
-                mediaPlayer?.start()
+            when(strCountry){
+                "america"->{
+                    temp = R.raw.unitedstatesinfo
+                }
+                "canada" ->{
+                    temp = R.raw.canadainfo
+                }
+                "mexico" ->{
+                    temp = R.raw.mexicoinfo
+                }
+                "alasca" -> {
+                    temp = R.raw.alascainfo
+                }
+
+
             }
 
+        }else if(strFinger.equals("finger")){
+            when(strCountry){
+                "america"->{
+                    temp = R.raw.america
+                }
+                "canada" ->{
+                    temp = R.raw.canada
+                }
+                "mexico" ->{
+                    temp = R.raw.mexico
+                }
+                "alasca" -> {
+                    temp = R.raw.alasca
+                }
+
+
+            }
 
         }
+        mediaPlayer = MediaPlayer.create(requireContext(), temp)
+        Toast.makeText(requireContext(),strCountry,Toast.LENGTH_SHORT).show()
+        mediaPlayer = MediaPlayer.create(requireContext(), temp)
+        mediaPlayer!!.start()
     }
 
     fun areRectanglesIntersecting(rect1: RectF, rect2: RectF): Boolean {
@@ -414,5 +333,12 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
         activity?.runOnUiThread {
             Toast.makeText(requireContext(), error, Toast.LENGTH_SHORT).show()
         }
+    }
+
+    override fun onStop() {
+        super.onStop()
+        mediaPlayer!!.stop()
+        sharedPreferences?.edit()!!.remove("firstItem").apply()
+        sharedPreferences?.edit()!!.remove("secondItem").apply()
     }
 }
