@@ -1609,7 +1609,6 @@ int id title 0x7f09014e
 int id titleDividerNoCustom 0x7f09014f
 int id title_template 0x7f090150
 int id toggle 0x7f090151
-int id toolbar 0x7f090152
 int id top 0x7f090153
 int id topPanel 0x7f090154
 int id touch_outside 0x7f090155
@@ -1724,6 +1723,7 @@ int layout select_dialog_multichoice_material 0x7f0c0038
 int layout select_dialog_singlechoice_material 0x7f0c0039
 int layout support_simple_spinner_dropdown_item 0x7f0c003a
 int mipmap ic_launcher 0x7f0d0000
+int mipmap ic_launcher_background 0x7f0d0003
 int mipmap ic_launcher_foreground 0x7f0d0001
 int mipmap ic_launcher_round 0x7f0d0002
 int navigation nav_graph 0x7f0e0000

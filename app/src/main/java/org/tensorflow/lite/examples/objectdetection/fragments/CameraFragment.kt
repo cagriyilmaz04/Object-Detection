@@ -317,10 +317,15 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
             }
 
         }
-        mediaPlayer = MediaPlayer.create(requireContext(), temp)
-        Toast.makeText(requireContext(),strCountry,Toast.LENGTH_SHORT).show()
-        mediaPlayer = MediaPlayer.create(requireContext(), temp)
-        mediaPlayer!!.start()
+        try {
+            mediaPlayer = MediaPlayer.create(requireContext(), temp)
+            Toast.makeText(requireContext(),strCountry,Toast.LENGTH_SHORT).show()
+            mediaPlayer = MediaPlayer.create(requireContext(), temp)
+            mediaPlayer!!.start()
+        }catch (e:Exception){
+
+        }
+
     }
 
     fun areRectanglesIntersecting(rect1: RectF, rect2: RectF): Boolean {
