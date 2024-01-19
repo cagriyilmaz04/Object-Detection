@@ -47,6 +47,7 @@ import org.tensorflow.lite.examples.objectdetection.R
 import org.tensorflow.lite.examples.objectdetection.databinding.FragmentCameraBinding
 import org.tensorflow.lite.task.vision.detector.Detection
 
+
 class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
 
     private val TAG = "ObjectDetection"
@@ -78,6 +79,7 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
             Navigation.findNavController(requireActivity(), R.id.fragment_container)
                 .navigate(CameraFragmentDirections.actionCameraToPermissions())
         }
+
     }
 
     override fun onDestroyView() {
@@ -342,7 +344,10 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
 
     override fun onStop() {
         super.onStop()
-        mediaPlayer!!.stop()
+        mediaPlayer?.let {
+            it.stop()
+        }
+
         sharedPreferences?.edit()!!.remove("firstItem").apply()
         sharedPreferences?.edit()!!.remove("secondItem").apply()
     }

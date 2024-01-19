@@ -48,12 +48,12 @@
         "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_tfl_logo.png.flat",
-        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\drawable-v24\\tfl_logo.png"
-    },
-    {
         "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
         "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_tfl_logo.png.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\drawable-v24\\tfl_logo.png"
     },
     {
         "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\raw_america.mp3.flat",
@@ -106,6 +106,10 @@
     {
         "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_minus.xml.flat",
         "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\drawable\\ic_minus.xml"
+    },
+    {
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\drawable_cover_image.jpeg.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\drawable\\cover_image.jpeg"
     },
     {
         "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
