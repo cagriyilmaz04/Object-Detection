@@ -229,6 +229,7 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
                 imageWidth
             )
 
+
             if(results!=null&&results.size>1){
                 val firstItem = results.get(0)
                 val secondItem = results.get(1)
@@ -242,34 +243,61 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
                     var strFinger = ""
 
                     if (intersecting) {
-                        if(!((sharedPreferences?.getString("firstItem","")!!.equals(firstItem.categories.get(0).label.toString())||sharedPreferences?.getString("firstItem","").equals(secondItem.categories.get(0).label.toString())&&
-                                    (sharedPreferences?.getString("secondItem","")!!.equals(firstItem.categories.get(0).label.toString())||sharedPreferences?.getString("secondItem","").equals(secondItem.categories.get(0).label.toString()))))){
+                        if(!((sharedPreferences?.getString("firstItem","")!!.equals(firstItem.categories.get(0).label.toString())||
+                                    sharedPreferences?.getString("firstItem","").equals(secondItem.categories.get(0).label.toString())&&
+                                    (sharedPreferences?.getString("secondItem","")!!.equals(firstItem.categories.get(0).label.toString())
+                                            ||sharedPreferences?.getString("secondItem","").equals(secondItem.categories.get(0).label.toString()))))){
                             if(firstItem.categories.get(0).label.equals("finger")){
                                 strFinger += "finger"
                                 strCountry += secondItem.categories.get(0).label.toString()
+                                sharedPreferences!!.edit().remove("firstItem").apply()
+                                sharedPreferences!!.edit().remove("secondItem").apply()
+
+                                sharedPreferences!!.edit().putString("firstItem",strFinger).apply()
+                                sharedPreferences!!.edit().putString("secondItem",strCountry).apply()
+
+
+                                //Toast.makeText(requireContext(),"1",Toast.LENGTH_SHORT).show()
+                                GiveInformation(strFinger,strCountry)
 
                             }else if(secondItem.categories.get(0).label.equals("finger")){
                                 strFinger += "finger"
                                 strCountry += firstItem.categories.get(0).label.toString()
+                                sharedPreferences!!.edit().remove("firstItem").apply()
+                                sharedPreferences!!.edit().remove("secondItem").apply()
+
+                                sharedPreferences!!.edit().putString("firstItem",strFinger).apply()
+                                sharedPreferences!!.edit().putString("secondItem",strCountry).apply()
+
+
+                                GiveInformation(strFinger,strCountry)
                             }else if(firstItem.categories.get(0).label.equals("two_fingers")){
                                 strFinger += "two_fingers"
                                 strCountry += secondItem.categories.get(0).label.toString()
+                                sharedPreferences!!.edit().remove("firstItem").apply()
+                                sharedPreferences!!.edit().remove("secondItem").apply()
+
+                                sharedPreferences!!.edit().putString("firstItem",strFinger).apply()
+                                sharedPreferences!!.edit().putString("secondItem",strCountry).apply()
+
+
+                                GiveInformation(strFinger,strCountry)
                             }else if(secondItem.categories.get(0).label.equals("two_fingers")){
                                 strFinger += "two_fingers"
                                 strCountry += firstItem.categories.get(0).label.toString()
+                                sharedPreferences!!.edit().remove("firstItem").apply()
+                                sharedPreferences!!.edit().remove("secondItem").apply()
+
+                                sharedPreferences!!.edit().putString("firstItem",strFinger).apply()
+                                sharedPreferences!!.edit().putString("secondItem",strCountry).apply()
+
+
+                                GiveInformation(strFinger,strCountry)
+
                             }
-                            sharedPreferences!!.edit().remove("firstItem").apply()
-                            sharedPreferences!!.edit().remove("secondItem").apply()
 
-                            sharedPreferences!!.edit().putString("firstItem",strFinger).apply()
-                            sharedPreferences!!.edit().putString("secondItem",strCountry).apply()
-
-
-                            Toast.makeText(requireContext(),"1",Toast.LENGTH_SHORT).show()
-                            GiveInformation(strFinger,strCountry)
 
                         }
-                        Toast.makeText(requireContext(), "Objeler çakışıyor!", Toast.LENGTH_SHORT).show()
                 }
             }
 
@@ -279,9 +307,7 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
     }
 
     private fun GiveInformation(strFinger: String, strCountry: String) {
-
         var temp = 0
-
         if(strFinger.equals("two_fingers")){
             when(strCountry){
                 "america"->{
@@ -297,6 +323,24 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
                     temp = R.raw.alascainfo
                 }
 
+                "australia" -> {
+                    temp = R.raw.australia_info
+                }
+                "egypt" -> {
+                    temp = R.raw.egypt_info
+                }
+                "algeria" -> {
+                    temp = R.raw.algeria_info
+                }
+                "france" -> {
+                    temp = R.raw.france_info
+                }
+                "brasil" -> {
+                    temp = R.raw.brasil_info
+                }
+                "china" -> {
+                    temp = R.raw.china_info
+                }
 
             }
 
@@ -315,18 +359,37 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
                     temp = R.raw.alasca
                 }
 
+                "australia" -> {
+                    temp = R.raw.australia
+                }
+                "egypt" -> {
+                    temp = R.raw.egypt
+                }
+                "algeria" -> {
+                    temp = R.raw.algeria
+                }
+                "france" -> {
+                    temp = R.raw.france
+                }
+                "brasil" -> {
+                    temp = R.raw.brasil
+                }
+                "china" -> {
+                    temp = R.raw.china
+                }
+
+
+
+
 
             }
 
         }
-        try {
+
             mediaPlayer = MediaPlayer.create(requireContext(), temp)
-            Toast.makeText(requireContext(),strCountry,Toast.LENGTH_SHORT).show()
             mediaPlayer = MediaPlayer.create(requireContext(), temp)
             mediaPlayer!!.start()
-        }catch (e:Exception){
 
-        }
 
     }
 
@@ -344,9 +407,7 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
 
     override fun onStop() {
         super.onStop()
-        mediaPlayer?.let {
-            it.stop()
-        }
+        mediaPlayer!!.stop()
 
         sharedPreferences?.edit()!!.remove("firstItem").apply()
         sharedPreferences?.edit()!!.remove("secondItem").apply()

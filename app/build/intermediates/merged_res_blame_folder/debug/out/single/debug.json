@@ -16,44 +16,36 @@
         "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\raw\\alascainfo.mp3"
     },
     {
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\raw_algeria_info.mp3.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\raw\\algeria_info.mp3"
+    },
+    {
         "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\raw_canada.mp3.flat",
         "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\raw\\canada.mp3"
     },
     {
-        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_background.webp.flat",
-        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_background.webp"
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\raw_france.mp3.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\raw\\france.mp3"
+    },
+    {
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\raw_brasil_info.mp3.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\raw\\brasil_info.mp3"
     },
     {
         "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.webp"
-    },
-    {
-        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
-    },
-    {
         "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\raw_mexicoinfo.mp3.flat",
         "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\raw\\mexicoinfo.mp3"
     },
     {
-        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\raw_egypt.mp3.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\raw\\egypt.mp3"
     },
     {
         "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
         "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_tfl_logo.png.flat",
-        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\drawable-v24\\tfl_logo.png"
     },
     {
         "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\raw_america.mp3.flat",
@@ -64,28 +56,20 @@
         "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_background.webp"
     },
     {
-        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\raw_temp.mp3.flat",
-        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\raw\\temp.mp3"
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\raw_australia.mp3.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\raw\\australia.mp3"
     },
     {
-        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_background.webp.flat",
-        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_background.webp"
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\raw_china_info.mp3.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\raw\\china_info.mp3"
     },
     {
-        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_splash.xml.flat",
-        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\layout\\activity_splash.xml"
-    },
-    {
-        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\navigation_nav_graph.xml.flat",
-        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\navigation\\nav_graph.xml"
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\raw_brasil.mp3.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\raw\\brasil.mp3"
     },
     {
         "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\raw_unitedstatesinfo.mp3.flat",
         "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\raw\\unitedstatesinfo.mp3"
-    },
-    {
-        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_background.webp.flat",
-        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_background.webp"
     },
     {
         "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
@@ -104,20 +88,20 @@
         "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\raw\\alasca.mp3"
     },
     {
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\raw_china.mp3.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\raw\\china.mp3"
+    },
+    {
         "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_minus.xml.flat",
         "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\drawable\\ic_minus.xml"
     },
     {
-        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\drawable_cover_image.jpeg.flat",
-        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\drawable\\cover_image.jpeg"
-    },
-    {
-        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
-    },
-    {
         "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\raw_france_info.mp3.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\raw\\france_info.mp3"
     },
     {
         "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_plus.xml.flat",
@@ -128,28 +112,12 @@
         "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_camera.xml.flat",
         "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\layout\\fragment_camera.xml"
     },
     {
-        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_background.webp.flat",
-        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_background.webp"
-    },
-    {
         "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
         "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.webp"
-    },
-    {
-        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.webp"
-    },
-    {
-        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\color_selector_ic.xml.flat",
-        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\color\\selector_ic.xml"
     },
     {
         "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_foreground.webp.flat",
@@ -160,15 +128,95 @@
         "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_background.webp.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_background.webp"
+    },
+    {
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\raw_algeria.mp3.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\raw\\algeria.mp3"
+    },
+    {
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_tfl_logo.png.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\drawable-v24\\tfl_logo.png"
+    },
+    {
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\raw_temp.mp3.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\raw\\temp.mp3"
+    },
+    {
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_background.webp.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_background.webp"
+    },
+    {
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\raw_australia_info.mp3.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\raw\\australia_info.mp3"
+    },
+    {
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_splash.xml.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\navigation\\nav_graph.xml"
+    },
+    {
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_background.webp.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_background.webp"
+    },
+    {
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\drawable_cover_image.jpeg.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\drawable\\cover_image.jpeg"
+    },
+    {
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_background.webp.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_background.webp"
+    },
+    {
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\raw_egypt_info.mp3.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\raw\\egypt_info.mp3"
+    },
+    {
+        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\color_selector_ic.xml.flat",
+        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\color\\selector_ic.xml"
+    },
+    {
         "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\raw_canadainfo.mp3.flat",
         "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\raw\\canadainfo.mp3"
     },
     {
         "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_foreground.webp.flat",
         "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.webp"
-    },
-    {
-        "merged": "C:\\Bitirme\\object_detection\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Bitirme\\object_detection\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
     }
 ]
